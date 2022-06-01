@@ -2,8 +2,8 @@ import React from 'react';
 import Score from './Score';
 import Button from './Button'
 
-function Quiz({questions, handleAnswer, currentQuestion, score}) {
-  // destructure the question properties to display using the currentQuestion index value
+function Quiz({ questions, handleAnswer, currentQuestion, score }) {
+  // destructure the question properties to display using the currentQuestion index value - correct_answer is a string, incorrect_answers is an array
   const { correct_answer, incorrect_answers} = questions[currentQuestion];
   // put the answers and the incorrect answers in an array
   let shuffledAnswers = [correct_answer, ...incorrect_answers];
@@ -14,7 +14,11 @@ function Quiz({questions, handleAnswer, currentQuestion, score}) {
 
   return (
     <section className="quiz">
-      <Score questions={questions} currentQuestion={currentQuestion} score={score}/>
+      <Score
+        questionsLength={questions.length}
+        currentQuestion={currentQuestion}
+        score={score}
+      />
 
       <article className="container">
         <h2 dangerouslySetInnerHTML={{__html: questions[currentQuestion].question}}/>

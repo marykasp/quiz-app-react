@@ -1,15 +1,16 @@
 import React from 'react'
 
-function Score({questions, currentQuestion, score}) {
+function Score({questionsLength, currentQuestion, score}) {
 
   const widthValue = () => {
-    if(currentQuestion  === 0) {
+    const total = (currentQuestion / questionsLength)
+    if(total < 0.2) {
       return "20%"
-    } else if(currentQuestion === 1) {
+    } else if(currentQuestion < 0.4) {
       return "40%"
-    } else if(currentQuestion === 2) {
+    } else if(currentQuestion < 0.6) {
       return "60%"
-    } else if(currentQuestion === 3) {
+    } else if(currentQuestion < 0.8) {
       return "80%"
     } else {
       return "100%";
@@ -20,7 +21,7 @@ function Score({questions, currentQuestion, score}) {
     <div className="head-display">
       <div className="head-question-num">
         <p className="head-prefix">Question</p>
-        <h4 className="head-main-text" id="questionCounter">{currentQuestion + 1} / {questions.length}</h4>
+        <h4 className="head-main-text" id="questionCounter">{currentQuestion + 1} / {questionsLength}</h4>
         <div className="progress-bar">
           <div className="progress-bar-full" style={{width: widthValue()}}></div>
         </div>
