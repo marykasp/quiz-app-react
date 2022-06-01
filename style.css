@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #102a42;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e66b6b;
+}
+
+.quiz {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 4rem auto;
+  background: hsla(0,0%,100%,0.664);
+  border-radius: 0.25rem;
+  padding: 3rem;
+}
+
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* open modal container */
+/* .modal-container.open {
+  opacity: 1;
+  z-index: 999;
+} */
+
+.modal-content {
+  background: #fff;
+  width: 90vw;
+  max-width: 620px;
+  padding: 3rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  border-radius: 1rem;
+  border-color: transparent;
+  padding: 0.25rem 0.5rem;
+  display: block;
+  width: 35%;
+  margin-left: auto;
+  margin-top: 2rem;
+  font-weight: 700;
+  background: #ebdbc3;
+  color: #222;
+}
