@@ -71,7 +71,7 @@ function App() {
             )}
           </>
         ) : (<Loader />)}
-      </main>
+      </main>3
     </div>
   )
 
