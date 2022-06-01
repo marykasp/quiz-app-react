@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-function Score({questions, currentQuestion}) {
-  const [score, setScore] = useState(0);
+function Score({questions, currentQuestion, score}) {
 
   const widthValue = () => {
     if(currentQuestion  === 0) {
@@ -28,7 +27,7 @@ function Score({questions, currentQuestion}) {
       </div>
       <div className="head-score">
         <p className="head-prefix">Score</p>
-        <h4 className="head-main-text">0</h4>
+        <h4 className="head-main-text">{score}</h4>
       </div>
     </div>
   )
