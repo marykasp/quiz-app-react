@@ -12,6 +12,7 @@ body {
   /* line-height: 1.5; */
   color: #102a42;
   background-image: linear-gradient(to bottom, rgba(191,69,91,0.8), rgba(217, 126, 126, 0.8));
+  min-height: 100vh;
 }
 
 h2 {
@@ -21,6 +22,38 @@ h2 {
   opacity: 0.9;
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.App {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-btn {
+  width: 150px;
+  padding: 0.75rem 1rem;
+  border: transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #2e3047;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.start-btn:hover {
+  background-color:rgba(217, 126, 126, 0.8);
+  border: 1px solid #fff;
 }
 
 .loader {
@@ -46,7 +79,7 @@ h2 {
 }
 
 main {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,12 +207,6 @@ article {
   z-index: 999;
 }
 
-/* open modal container */
-/* .modal-container.open {
-  opacity: 1;
-  z-index: 999;
-} */
-
 .modal-content {
   background: #fff;
   width: 90vw;
@@ -190,7 +217,8 @@ article {
   position: relative;
 }
 
-.close-btn, .next-question {
+.close-btn,
+.next-question {
   border-radius: 5px;
   border-color: transparent;
   padding: 0.75rem 1rem;
@@ -206,6 +234,7 @@ article {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
+
 
 .close-btn:hover, .next-question:hover {
   background: #d97e7ecc;
