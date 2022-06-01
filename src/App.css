@@ -112,9 +112,10 @@ article {
   background: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: transparent;
 }
 
-button.answer-btn {
+.answer-btn {
   display: block;
   border: transparent;
   background: #fff;
