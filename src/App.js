@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Trivia Quiz</title>
-  </head>
-  <body>
-    <main>
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <main>
       <div class="modal-container open">
         <div class="modal-content">
           <h2>Congrats!</h2>
@@ -22,7 +17,7 @@
             <p class="head-prefix">Question</p>
             <h4 class="head-main-text" id="questionCounter">1 / 5</h4>
             <div class="progress-bar">
-              <div class="progress-bar-full" style="width: 40%"></div>
+              <div class="progress-bar-full" style={{width: "40%"}}></div>
             </div>
           </div>
           <div class="head-score">
@@ -54,7 +49,8 @@
         <button class="next-question">next question</button>
       </section>
     </main>
+    </div>
+  );
+}
 
-    <script src="script.js"></script>
-  </body>
-</html>
+export default App;
